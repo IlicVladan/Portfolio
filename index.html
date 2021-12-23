@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+<meta name="viewport" content="width=device-width initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+<title>Portfolio</title>
+</head>
+
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="#nav">PORTFOLIO</a>
+  <a href="#kontakt">KONTAKT</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<script>//skripta za responsive navigaciju
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<script>//skripta za smooth scrolling
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<img src="images/background.jpg" alt="" style="width:100%"> 
+
+<div class="row">
+	<h1 id="nav">DOBRODOŠLI NA MOJ WEB PORTFOLIO</h1><p class="paragraf">Ovo su aplikacije i web sajtovi koje sam kreirao, radeći na projektima na ITAkademiji</p><br>
+ 
+ <div class="column">
+    <img src="images/vesti.png" style="width:100%" alt="" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+	<p class="paragraf">Portal "Vesti" - rađen u PHP-u, administrator može dodavati korisnike sa raznim privilegijama, može dodavati vesti, kategorije, odobriti ili izbrisati komentare. Postoji registracija korisnika, pretraga, i ispod svake vesti broj pregleda i komentara. Podaci se čuvaju u MySQL bazi podataka </p>
+	<a href="https://github.com/IlicVladan/vesti" target="_blank">Pogledajte kod</a>
+  </div>
+  
+<div class="column">
+    <img src="images/portfolio.jpg" style="width:100%" alt="" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+	<p class="paragraf">Ovaj portfolio - rađen u HTML-u, CSS-u, sa malo PHP-a za kontakt formu i JavaScript-a za galeriju slika i responsive navigaciju. Pozadina odrađena u Adobe Photoshop CC-u </p>
+	<a href="https://github.com/IlicVladan/portfolio" target="_blank">Pogledajte kod</a>
+</div>
+
+<div class="column">
+    <img src="images/web_store.jpg" style="width:100%" alt="" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+	<p class="paragraf">Prodavnica "Web store" - rađena u PHP-u, administrator može dodavati proizvode, pregledati i odobravati komentare, odgovarati na pitanja. Korisnici koje admin doda mogu postavljati oglase, subscribers-i mogu komentarisati proizvode i postavljati pitanja. Postoji meni sa kategorijama i statistika o logovanju korisnika, kao i ko je i kada postavio određeni proizvod. Podaci se čuvaju u MySQL bazi podataka </p><br><br>
+</div>
+
+  <div class="column">
+    <img src="images/rad2.JPG" style="width:100%" alt="" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+	<p class="paragraf">Turistička agencija "Greece travel agency" - rađena u Adobe Dreamweaver CC-u, čist HTML i CSS kod, logo firme je takođe moje delo</p>
+	<a href="https://github.com/IlicVladan/Greece-travel-agency" target="_blank">Pogledajte kod</a>
+  </div>
+  
+  <div class="column">
+    <img src="images/rad3.JPG" alt="" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+	<p class="paragraf">Agencija za prodaju apartmana "Moje nekretnine" - rađena u WordPress-u"</p>
+	<a href="https://github.com/IlicVladan/Moje-nekretnine" target="_blank">Pogledajte kod</a>
+  </div>
+ 
+<div class="column">
+    <img src="images/my_first_theme.jpg" style="width:100%" alt="" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+	<p class="paragraf">WordPress tema - kreirana mogućnost dodavanja widgeta u temi, kao i podešavanja lokacije navigacije (menu opcija)</p>
+	<a href="https://github.com/IlicVladan/my_first_theme" target="_blank">Pogledajte kod</a><br><br><br>
+</div>
+
+<div class="column">
+    <img src="images/bookstore.jpg" style="width:100%" alt="" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+	<p class="paragraf">Aplikacija "Biblioteka" - sadrži dugmiće za unos i brisanje knjiga, i dugmiće za pretragu svih knjiga ili određene knjige</p>
+	<a href="https://github.com/IlicVladan/bookstore" target="_blank">Pogledajte kod</a>
+</div>
+
+<div class="column">
+    <img src="images/rss-citac.jpg" style="width:100%" alt="" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+	<p class="paragraf">Aplikacija "Rss čitač" - izborom dnevnog lista prikazuje najnovije vesti iz svih kategorija</p>
+	<a href="https://github.com/IlicVladan/rss_citac" target="_blank">Pogledajte kod</a><br><br><br><br><br><br>
+</div>
+  
+	</div>
+	
+	<div>
+		<p class="paragraf">Ovo su logoi i naslovna stranica knjige,<br> koje sam kreirao u Dizajn studiju na ITAkademiji i kao frilenser</p><br>
+  <div class="column">
+    <img src="images/logo.jpg" style="width:100%; padding: 8px 12px;" onclick="openModal();currentSlide(9)" class="hover-shadow cursor" alt=""><p class="paragraf">Logo za američku gradjevinsku firmu "V&H construction"</p>
+  </div>
+	<div class="column">
+    <img src="images/logo2.jpg" style="width:100%; padding: 8px 12px;" onclick="openModal();currentSlide(10)" class="hover-shadow cursor" alt=""><p class="paragraf">Logo za "CityScout 360"</p>
+  </div><div class="column">
+    <img src="images/knjiga.jpg" style="width:100%; padding: 8px 12px;" onclick="openModal();currentSlide(11)" class="hover-shadow cursor" alt=""><p class="paragraf">Naslovna stranica za knjigu "Drugo carstvo"</p>
+  </div><div class="column">
+    <img src="images/logo3.jpg" style="width:100%;  padding: 8px 12px" onclick="openModal();currentSlide(12)" class="hover-shadow cursor" alt=""><p class="paragraf">Logo za restoran "Food and wine"</p>
+  </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+	
+
+
+<div id="myModal" class="modal">
+  
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+ 
+  <div class="modal-content">
+    <div class="mySlides">
+      <div class="numbertext">1 / 12</div>
+      <img src="images/vesti.png" alt="vhjvhvbj" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <img src="images/portfolio.JPG" alt="" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 12</div>
+      <img src="images/web_store.jpg" alt="" style="width:100%">
+    </div>
+	  <div class="mySlides">
+      <div class="numbertext">4 / 12</div>
+      <img src="images/rad2.JPG" alt="" style="width:100% 
+  padding: 8px 12px;">
+    </div>
+	  <div class="mySlides">
+      <div class="numbertext">5 / 12</div>
+      <img src="images/rad3.JPG" alt="" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">6 / 12</div>
+      <img src="images/my_first_theme.jpg" alt="" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">7 / 12</div>
+      <img src="images/bookstore.jpg" alt="" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">8 / 12</div>
+      <img src="images/rss-citac.jpg" alt="" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">9 / 12</div>
+      <img src="images/logo.jpg" alt="" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">10 / 12</div>
+      <img src="images/logo2.jpg" alt="" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">11 / 12</div>
+      <img src="images/knjiga.jpg" alt="" style="width:100%">
+    </div><div class="mySlides">
+      <div class="numbertext">12 / 12</div>
+      <img src="images/logo3.jpg" alt="" style="width:100%">
+    </div>
+  </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    </div>
+
+<script>//skripta za galeriju slika
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+	
+	
+
+	
+	
+<div>
+<h1 id="kontakt">KONTAKT</h1>
+<p class="paragraf">Odvojite par minuta da me kontaktirate. Za sva pitanja stojim Vam na raspolaganju.</p>
+<form id="frmContact" action="contact.php" method="post">
+    <div id="mail-status"></div>
+    <div class="contact-row column-right">
+        <label style="padding-top: 20px;">Ime i prezime:</label> <span
+            id="userName-info" class="info"></span><br /> <input
+            type="text" name="userName" id="userName"
+            class="demoInputBox">
+    </div>
+    <div class="contact-row column-right">
+        <label>Imejl:</label> <span id="userEmail-info" class="info"></span><br />
+        <input type="text" name="userEmail" id="userEmail"
+            class="demoInputBox">
+    </div>
+    <div class="contact-row">
+        <label>Broj telefona:</label> <span id="subject-info" class="info"></span><br />
+        <input type="text" name="subject" id="subject"
+            class="demoInputBox">
+    </div>
+    <div>
+        <label>Poruka:</label> <span id="content-info" class="info"></span><br />
+        <textarea name="content" id="content" class="demoInputBox"
+            rows="3"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Send" class="btnAction" />
+    </div>
+</form>
+	<div class="adresa">
+		<p><i class="fas fa-map-marker-alt"></i> Adresa: Srbija: Beograd</p>
+		<p><i class="fas fa-phone"></i> Broj telefona: +381 62 960 37 03</p>
+		<p><i class="far fa-envelope"></i> Imejl: vlado_ilic2008@yahoo.com</p>
+	</div>
+</div>	
+
+<footer>
+<p class="footer1">&copy; Vladan Ilić</p>
+<p class="footer2">Designed by Vladan Ilić</p>
+
+</footer>
+
+
+</body>
+</html>
