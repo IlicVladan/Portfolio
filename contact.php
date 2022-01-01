@@ -6,7 +6,7 @@ $mail->IsSMTP();
 $mail->SMTPDebug = 0;
 $mail->SMTPAuth = TRUE;
 $mail->SMTPSecure = "tls";
-$mail->Port     = 587;  
+$mail->Port     = 465;  
 $mail->Username = "vlado_ilic2008";
 $mail->Password = "Yahoo2017";
 $mail->Host     = "smtp.mail.yahoo.com";
